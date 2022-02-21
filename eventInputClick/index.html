@@ -23,16 +23,14 @@
                 <input type="text" v-on:input="capterEventInput($event)">
                 <p>{{value}}</p>
 
-                <input type="text">
+                <input type="text" v-model="valeurNom">
                 <button v-on:keyup.esc="capterEventClick()" class="btn btn-info">
                 Alerte
                 </button>
             </form>
 
             <div class="card-footer text-muted">
-                <p>
-
-                </p>
+                <p>{{unNom}}</p>
             </div>
 
 

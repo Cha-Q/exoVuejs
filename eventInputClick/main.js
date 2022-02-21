@@ -4,6 +4,8 @@ Vue.createApp({
         return {
 
             value: 'Vous êtes ?',
+            valeurNom: '',
+            unNom: ''
         };
     },
 
@@ -12,7 +14,10 @@ Vue.createApp({
 
             this.value = $event.target.value;
         },
+
+
         capterEventClick() {
+            this.unNom = this.valeurNom;
             return alert('Attention !');
 
         }
