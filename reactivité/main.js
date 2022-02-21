@@ -4,6 +4,7 @@ const monApp = Vue.createApp({
         return {
             rdm: 0,
             nombreMyst: 0,
+            check: 0,
             uneString: 'Faites vos jeux !',
             horsJeu: 'display: ;',
             jeu: 'display:none;'
@@ -27,13 +28,14 @@ const monApp = Vue.createApp({
             } else {
                 this.uneString = 'Faites vos jeux !';
             }
+            // this.check = this.nombreMyst;
             setTimeout(() => {
-                if (this.nombreMyst === value) {
-
+                if (this.nombreMyst === value && this.nombreMyst > 0) {
                     this.nombreMyst = 0;
                     this.uneString = 'Faites vos jeux !';
-                    this.horsJeu = 'display: ;',
-                        this.jeu = 'display:none;'
+                    this.horsJeu = 'display: ;';
+                    this.jeu = 'display:none;';
+                    return console.log('stop');
 
                 }
             }, 5000);
