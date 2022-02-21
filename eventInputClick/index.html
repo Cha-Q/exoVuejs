@@ -19,17 +19,21 @@
             <h1 class="mx-3">
                 Un tp Binding !
             </h1>
-            <form action="">
+            <form v-on:click.prevent>
                 <input type="text" v-on:input="capterEventInput($event)">
                 <p>{{value}}</p>
 
                 <input type="text">
-                <button @click="capterEventClick()" class="btn btn-info">
+                <button v-on:keyup.esc="capterEventClick()" class="btn btn-info">
                 Alerte
-            </button>
+                </button>
             </form>
 
+            <div class="card-footer text-muted">
+                <p>
 
+                </p>
+            </div>
 
 
 
