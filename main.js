@@ -6,7 +6,7 @@ Vue.createApp({
             nom: 'george',
             nomLog: '',
             age: 30,
-            agePlus: 30,
+
 
         };
     },
@@ -18,7 +18,7 @@ Vue.createApp({
         },
         addDix() {
 
-            return this.agePlus + 10;
+            return this.age + 10;
         }
     },
 
