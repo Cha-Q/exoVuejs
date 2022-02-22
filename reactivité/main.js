@@ -13,7 +13,7 @@ const monApp = Vue.createApp({
     methods: {
         start() {
             this.rdm = Math.floor(Math.random() * (21)) + 1;
-            console.log(this.rdm);
+            console.log(`le numéro gagnant est le ${this.rdm}`);
             this.horsJeu = 'display:none;';
             this.jeu = 'display: ;'
         },
@@ -31,12 +31,12 @@ const monApp = Vue.createApp({
             // this.check = this.nombreMyst;
             setTimeout(() => {
                 if (this.nombreMyst === value && this.nombreMyst > 0) {
+
                     this.nombreMyst = 0;
                     this.uneString = 'Faites vos jeux !';
                     this.horsJeu = 'display: ;';
                     this.jeu = 'display:none;';
-                    return console.log('stop');
-
+                    return console.log('Fin du jeu');
                 }
             }, 5000);
         }
