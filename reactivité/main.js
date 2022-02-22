@@ -8,8 +8,8 @@ const monApp = Vue.createApp({
             uneString: 'Faites vos jeux !',
             horsJeu: 'display: ;',
             jeu: 'display:none;',
-            compteurV: 0,
-            compteurD: 0,
+            compteurV: '0 victoire',
+            compteurD: '0 défaite',
             cond: 'color: black',
             rep: '',
         };
