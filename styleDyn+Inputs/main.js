@@ -4,7 +4,6 @@ const app = Vue.createApp({
         return {
 
             selectCard1: false,
-            selectCard2: false,
             message: '',
             message2: '',
             selectClass1: true
@@ -22,15 +21,6 @@ const app = Vue.createApp({
 
             }
         },
-
-        // selectClass{
-
-        //     if (this.message === 'world') {
-        //         return selectClass1;
-        //     } else if (this.message === 'hello') {
-        //         return selectClass2;
-        //     }
-        // }
 
     },
     computed: {
