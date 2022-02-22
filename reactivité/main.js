@@ -35,13 +35,13 @@ const monApp = Vue.createApp({
                 this.compteurV++;
                 this.nombreMyst = 0;
                 return this.start();
+
             } else if (this.rdm < this.nombreMyst) {
                 this.rep = 'Votre nombre est trop grand, c\'est perdu !';
                 this.cond = 'color: red';
                 this.compteurD++;
                 this.nombreMyst = 0;
                 return this.start();
-            } else {
 
             }
             // this.check = this.nombreMyst;
@@ -50,9 +50,12 @@ const monApp = Vue.createApp({
 
                     this.nombreMyst = 0;
                     this.uneString = 'Vous avez été trop long, veuillez jouer à nouveau';
-                    return console.log('Fin du jeu. La partie va recommencer');
+
+                    console.log('Fin du jeu. La partie va recommencer');
+                    return this.start();
                 }
             }, 5000);
+
         }
 
     },
