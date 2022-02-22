@@ -16,9 +16,7 @@ const app = Vue.createApp({
         selectionCard(uneCard) {
             if (uneCard == 1) {
                 this.selectCard1 = !this.selectCard1;
-
-
-
+                console.log(this.selectCard1);
             }
         },
 
@@ -26,6 +24,7 @@ const app = Vue.createApp({
     },
     computed: {
         bonjour() {
+
             if (this.message === 'hello') {
                 console.log(random());
                 return this.oneColor = random();
