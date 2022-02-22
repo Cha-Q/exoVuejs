@@ -7,36 +7,50 @@ const monApp = Vue.createApp({
             check: 0,
             uneString: 'Faites vos jeux !',
             horsJeu: 'display: ;',
-            jeu: 'display:none;'
+            jeu: 'display:none;',
+            compteurV: 0,
+            compteurD: 0,
+            cond: 'color: black',
+            rep: '',
         };
     },
     methods: {
         start() {
             this.rdm = Math.floor(Math.random() * (21)) + 1;
             console.log(`le numéro gagnant est le ${this.rdm}`);
+            this.uneString = 'Faites vos jeux !';
             this.horsJeu = 'display:none;';
             this.jeu = 'display: ;'
         },
+        reset() {
+            window.location.reload();
+        }
 
     },
     watch: {
         nombreMyst(value) {
             if (this.rdm == this.nombreMyst) {
-                this.uneString = 'Bravo c\'est gagné !'
+                this.rep = 'Bravo c\'est gagné !';
+                this.cond = 'color: green';
+                this.compteurV++;
+                this.nombreMyst = 0;
+                return this.start();
             } else if (this.rdm < this.nombreMyst) {
-                this.uneString = 'Votre nombre est trop grand, c\'est perdu !'
+                this.rep = 'Votre nombre est trop grand, c\'est perdu !';
+                this.cond = 'color: red';
+                this.compteurD++;
+                this.nombreMyst = 0;
+                return this.start();
             } else {
-                this.uneString = 'Faites vos jeux !';
+
             }
             // this.check = this.nombreMyst;
             setTimeout(() => {
                 if (this.nombreMyst === value && this.nombreMyst > 0) {
 
                     this.nombreMyst = 0;
-                    this.uneString = 'Faites vos jeux !';
-                    this.horsJeu = 'display: ;';
-                    this.jeu = 'display:none;';
-                    return console.log('Fin du jeu');
+                    this.uneString = 'Vous avez été trop long, veuillez jouer à nouveau';
+                    return console.log('Fin du jeu. La partie va recommencer');
                 }
             }, 5000);
         }
