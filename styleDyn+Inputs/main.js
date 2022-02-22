@@ -1,14 +1,14 @@
 const app = Vue.createApp({
 
     data() {
+
         return {
 
             selectCard1: false,
             message: '',
             message2: '',
-            selectClass1: true
-
-
+            selectClass1: true,
+            oneColor: random(),
         };
     },
 
@@ -22,13 +22,18 @@ const app = Vue.createApp({
             }
         },
 
+
     },
     computed: {
         bonjour() {
             if (this.message === 'hello') {
-                return 'maClasseHello';
+                console.log(random());
+                return this.oneColor = random();
             } else if (this.message === 'world') {
-                return 'maClasseWorld';
+                console.log('aurevoir');
+                return this.oneColor = random();
+            } else {
+                return `background-color: blue;`;
             }
         },
         color() {
@@ -39,3 +44,11 @@ const app = Vue.createApp({
 });
 
 app.mount('#monApp');
+
+
+function random() {
+    return "background-color:" + '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+}
+
+
+//

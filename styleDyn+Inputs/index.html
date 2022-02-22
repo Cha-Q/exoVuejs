@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <input type="text" v-model="message">
-                    <h2 class="" v-bind:class="bonjour" :style="{display: selectCard1 ? 'none' : 'block'}">
+                    <h2 :style="bonjour, { display: selectCard1 ? 'none' : 'block' }">
                         Le premier titre
                     </h2>
 
@@ -29,7 +29,7 @@
             <div class="row ">
                 <div class="col-lg-12">
                     <input type="text" v-model="message2">
-                    <h2 class="" :style="color">
+                    <h2 :style="color">
                         Le deuxième titre
                     </h2>
 
