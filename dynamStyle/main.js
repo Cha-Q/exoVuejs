@@ -13,7 +13,6 @@ const app = Vue.createApp({
         selectionCard(uneCard) {
             if (uneCard == 1) {
                 this.selectCard1 = !this.selectCard1;
-                console.log(this.selectCard2);
                 console.log(this.selectCard1);
 
             } else if (uneCard == 2) {
@@ -27,4 +26,4 @@ const app = Vue.createApp({
 
 });
 
-app.mount('#monApp')
+app.mount('#monApp');
