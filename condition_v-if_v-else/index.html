@@ -16,14 +16,14 @@
     <div class="card" id="monApp">
         <input type="text" v-model="nomFilm">
 
-        <button class="btn btn-primary" @click="ajoutFilm">
+        <button class="btn btn-primary col-4" @click="ajoutFilm">
             Ajouter à votre Liste
         </button>
 
         <h1 v-if="tab.length > 0"> voici un film {{nomAff}}</h1>
         <p v-else-if="tab.length == 0">Pas encore de films dans votre liste</p>
 
-        <button class="btn btn-primary" @click="emptyTab">
+        <button class="btn btn-primary offset-6 col-4" @click="emptyTab">
             Vider votre Liste
         </button>
     </div>
