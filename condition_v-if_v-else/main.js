@@ -22,6 +22,9 @@ const app = Vue.createApp({
             this.tab = [];
             this.nomFilm = '';
 
+        },
+        suppr(value) {
+            this.tab.splice(value, 1);
         }
 
     },
