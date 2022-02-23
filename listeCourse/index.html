@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="text-center">TP liste de course</h1>
+
+    <div class="card" id="monApp">
+        <input class=" col-4 offset-4" type="text" v-model="nomFilm" style="margin-top:10px;">
+
+        <button class="btn btn-primary col-2 offset-5" @click="ajoutFilm" style="margin-top:10px;">
+            Ajouter à votre Liste
+        </button>
+
+        <p class="col-8 offset-1" v-if="tab.length === 0">Les courses du jour</p>
+
+        <div class="col-8 offset-1" v-else v-if="affichage == true">
+            <h1>Voici votre liste de courses :</h1>
+            <ul>
+                <li v-for="(temp,index) in tab">{{index}}-{{temp}} <i class="fa fa-dumpster" style="color:grey;cursor: pointer;" @click="suppr(index)"></i></li>
+            </ul>
+        </div>
+
+        <button class="btn btn-primary offset-10 col-2" @click="displayTab">
+            Afficher votre liste
+        </button>
+
+    </div>
+    <script src="https://unpkg.com/vue@next "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous ">
+    </script>
+    <script src="main.js "></script>
+</body>
+
+</html>
