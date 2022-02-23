@@ -21,17 +21,20 @@
             Ajouter à votre Liste
         </button>
 
-        <p class="col-8 offset-1" v-if="tab.length === 0">Les courses du jour</p>
+        <p class="col-8 offset-1" v-if="tab.length === 0">Commencez par remplir votre liste :</p>
 
         <div class="col-8 offset-1" v-else v-if="affichage == true">
-            <h1>Voici votre liste de courses :</h1>
+            <h3>Liste de courses :</h3>
             <ul>
                 <li v-for="(temp,index) in tab">{{index}}-{{temp}} <i class="fa fa-dumpster" style="color:grey;cursor: pointer;" @click="suppr(index)"></i></li>
             </ul>
         </div>
 
-        <button class="btn btn-primary offset-10 col-2" @click="displayTab">
-            Afficher votre liste
+        <button v-if="affichage == true" class="btn btn-primary offset-10 col-2" @click="displayTab">
+            Masquer votre liste <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        <button v-else class="btn btn-primary offset-10 col-2" @click="displayTab">
+            Afficher votre liste <i class="fa-solid fa-arrow-down-long"></i>
         </button>
 
     </div>
