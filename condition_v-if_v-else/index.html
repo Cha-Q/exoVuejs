@@ -22,7 +22,7 @@
         </button>
         <p class="col-8 offset-1" v-if="tab.length === 0">Pas encore de films dans votre liste (pensez à en ajouter)</p>
         <div class="col-8 offset-1" v-else>
-            <h1>Voici votre liste de film :</h1>
+            <h1>Voici votre liste de course :</h1>
             <ul>
                 <li v-for="(temp,index) in tab">{{index}}-{{temp}} <i class="fa fa-dumpster" style="color:grey;cursor: pointer;" @click="suppr(index)"></i></li>
             </ul>
