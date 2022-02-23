@@ -19,8 +19,11 @@
         <button class="btn btn-primary col-4" @click="ajoutFilm">
             Ajouter à votre Liste
         </button>
+        <h1 v-if="tab.length > 0">Voici votre liste de film :</h1>
+        <ul>
+            <li v-if="tab.length > 0" v-for="temp in tab"> {{temp}}</li>
+        </ul>
 
-        <li v-if="tab.length > 0" v-for="temp in tab"> {{temp}}</li>
         <p v-else-if="tab.length == 0">Pas encore de films dans votre liste</p>
 
         <button class="btn btn-primary offset-6 col-4" @click="emptyTab">
