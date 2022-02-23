@@ -20,8 +20,9 @@
                 <div class="col-lg-12">
                     <input type="text" v-model="message">
                     <h2 :class="" v-bind:style="
-                                [{display: selectCard1 ? 'none' : 'block'}, bonjour]
-                                ">
+                                                [{display: selectCard1 ? 'none' : 'block'}, 
+                                                bonjour]
+                                                ">
                         Le premier titre
                     </h2>
 
@@ -44,6 +45,7 @@
                 </button>
             </div>
 
+            <div v-if="selectClass1"> un titre connecté</div>
 
 
         </div>

@@ -7,7 +7,7 @@ const app = Vue.createApp({
             selectCard1: false,
             message: '',
             message2: '',
-            selectClass1: true,
+            selectClass1: false,
             oneColor: random(),
         };
     },
@@ -46,7 +46,7 @@ app.mount('#monApp');
 
 
 function random() {
-    return "background-color:" + '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+    return "background-color:" + '#' + (Math.random() * 0xFFFFFF << 0).toString(15);
 }
 
 
